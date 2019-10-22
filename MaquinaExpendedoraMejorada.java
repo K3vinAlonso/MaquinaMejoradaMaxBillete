@@ -93,7 +93,18 @@ public class MaquinaExpendedoraMejorada {
     {
         int cantidadDeDineroADevolver;
         cantidadDeDineroADevolver = totalDineroAcumulado + balanceClienteActual;
-        balanceClienteActual = 0;
+        
+        
+        if (balanceClienteActual > 0){
+           System.out.println ("Error, queda dinero en de la máquina");
+           int dineroVaciado = -1;
+        }
+        else {
+            cantidadDeDineroADevolver = balanceClienteActual + balanceClienteActual;
+            balanceClienteActual = 0;
+            totalDineroAcumulado = 0;
+        }
+        
         return cantidadDeDineroADevolver;
     }
 }
